@@ -1,0 +1,43 @@
+Atentamente,
+
+[Su nombre]
+[Su información de contacto]
+
+## Apéndice I
+**Para una aplicación de cuestionario que recupera preguntas de cuestionario de una base de datos, generalmente necesitará al menos dos tablas: una para almacenar información sobre el cuestionario en sí y otra para almacenar las preguntas y respuestas. Aquí están las tablas necesarias y sus estructuras básicas:**
+
+**1. Tabla de cuestionarios:**
+   - Esta tabla almacena información sobre cuestionarios individuales, como títulos de cuestionarios, descripciones y cualquier metadatos relacionada con todo el cuestionario.
+
+| Campo | Tipo | Descripción |
+|---|---|---|
+| quiz_id | INT (Clave principal) | Identificador único para cada cuestionario. |
+| title | VARCHAR(255) | Título o nombre del cuestionario. |
+| description | TEXT | Descripción del cuestionario. |
+| created_at | DATETIME | Marca de tiempo de cuándo se creó el cuestionario. |
+| ... | ... | Metadatos adicionales según sea necesario. |
+
+**2. Tabla de preguntas:**
+   - Esta tabla almacena las preguntas individuales del cuestionario, sus opciones y respuestas correctas.
+
+| Campo | Tipo | Descripción |
+|---|---|---|
+| question_id | INT (Clave principal) | Identificador único para cada pregunta. |
+| quiz_id | INT (Clave externa) | Relaciona cada pregunta con un cuestionario específico. |
+| question_text | TEXT | El texto de la pregunta del cuestionario. |
+| option_a | VARCHAR(255) | Opción A para la pregunta de opción múltiple. |
+| option_b | VARCHAR(255) | Opción B para la pregunta de opción múltiple. |
+| option_c | VARCHAR(255) | Opción C para la pregunta de opción múltiple. |
+| option_d | VARCHAR(255) | Opción D para la pregunta de opción múltiple. |
+| correct_option | CHAR(1) | Indica la opción correcta (A, B, C o D). |
+| ... | ... | Campos adicionales según sea necesario. |
+
+La relación entre estas dos tablas se establece a través del campo `quiz_id`, que actúa como una clave externa en la
+tabla Questions, haciendo referencia a la clave principal de la tabla Quiz.
+
+Es posible que se requieran tablas o campos adicionales según los requisitos específicos de su aplicación de cuestionario.
+Por ejemplo, si desea rastrear las respuestas del usuario y las puntuaciones, es posible que necesite una tabla para
+almacenar las presentaciones de los usuarios y las puntuaciones asociadas con cada cuestionario.
+
+Recuerda considerar los tipos de datos, las restricciones e los índices al diseñar tus tablas de base de datos para
+garantizar una recuperación de datos eficiente y la integridad de los datos.

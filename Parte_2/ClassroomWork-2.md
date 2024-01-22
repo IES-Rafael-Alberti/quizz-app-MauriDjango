@@ -2,13 +2,21 @@
 
 Estimados estudiantes,
 
-Construyendo sobre los conocimientos y habilidades adquiridos en la actividad anterior de cuestionario PHP, nos entusiasma presentar la segunda parte de nuestro proyecto de cuestionario PHP. En esta parte, mejorará la aplicación del cuestionario integrándola con una base de datos para recuperar preguntas del cuestionario de forma dinámica. Esto le dará experiencia práctica en la conectividad de la base de datos y las consultas SQL en PHP.
+Construyendo sobre los conocimientos y habilidades adquiridos en la actividad anterior de cuestionario PHP, nos entusiasma 
+presentar la segunda parte de nuestro proyecto de cuestionario PHP. En esta parte, mejorará la aplicación del cuestionario 
+integrándola con una base de datos para recuperar preguntas del cuestionario de forma dinámica. Esto le dará experiencia 
+práctica en la conectividad de la base de datos y las consultas SQL en PHP.
 
 **Objetivo:**
-El objetivo principal de esta actividad es ampliar sus habilidades en PHP integrando una base de datos en la aplicación del cuestionario. Aprenderá a recuperar preguntas y opciones de un cuestionario de una base de datos y presentarlas a los usuarios de forma dinámica.
+El objetivo principal de esta actividad es ampliar sus habilidades en PHP integrando una base de datos en la aplicación 
+del cuestionario. Aprenderá a recuperar preguntas y opciones de un cuestionario de una base de datos y presentarlas a los 
+usuarios de forma dinámica.
 
 **Descripción general de la actividad:**
-En esta actividad de dos horas, tomará el proyecto de cuestionario existente y lo modificará para que use una base de datos. En lugar de codificar preguntas de cuestionario de forma fija, creará una tabla de base de datos para almacenar datos de cuestionario, incluidas preguntas, opciones, respuestas correctas y comentarios. Su código PHP recuperará estos datos de la base de datos y los mostrará a los usuarios.
+En esta actividad de dos horas, tomará el proyecto de cuestionario existente y lo modificará para que use una base de 
+datos. En lugar de codificar preguntas de cuestionario de forma fija, creará una tabla de base de datos para almacenar 
+datos de cuestionario, incluidas preguntas, opciones, respuestas correctas y comentarios. Su código PHP recuperará estos 
+datos de la base de datos y los mostrará a los usuarios.
 
 **Componentes de la actividad:**
 
@@ -85,8 +93,12 @@ Atentamente,
 | correct_option | CHAR(1) | Indica la opción correcta (A, B, C o D). |
 | ... | ... | Campos adicionales según sea necesario. |
 
-La relación entre estas dos tablas se establece a través del campo `quiz_id`, que actúa como una clave externa en la tabla Questions, haciendo referencia a la clave principal de la tabla Quiz.
+La relación entre estas dos tablas se establece a través del campo `quiz_id`, que actúa como una clave externa en la 
+tabla Questions, haciendo referencia a la clave principal de la tabla Quiz.
 
-Es posible que se requieran tablas o campos adicionales según los requisitos específicos de su aplicación de cuestionario. Por ejemplo, si desea rastrear las respuestas del usuario y las puntuaciones, es posible que necesite una tabla para almacenar las presentaciones de los usuarios y las puntuaciones asociadas con cada cuestionario.
+Es posible que se requieran tablas o campos adicionales según los requisitos específicos de su aplicación de cuestionario. 
+Por ejemplo, si desea rastrear las respuestas del usuario y las puntuaciones, es posible que necesite una tabla para 
+almacenar las presentaciones de los usuarios y las puntuaciones asociadas con cada cuestionario.
 
-Recuerda considerar los tipos de datos, las restricciones e los índices al diseñar tus tablas de base de datos para garantizar una recuperación de datos eficiente y la integridad de los datos.
+Recuerda considerar los tipos de datos, las restricciones e los índices al diseñar tus tablas de base de datos para 
+garantizar una recuperación de datos eficiente y la integridad de los datos.
